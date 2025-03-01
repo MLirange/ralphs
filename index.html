@@ -6,32 +6,36 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Ralph's Rock Diner</title>
     <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/map.js" defer></script>
   </head>
   <body>
     <header>
-      <a href="./" class="social-link"><img src="./imgs/ralphs-logo-red.png" alt="Ralph's Diner Logo" /></a>
-      <div id="toggle"><span class="lines"></span><span class="lines"></span><span class="lines"></span></div>
-      <nav>
-        <ul>
-          <li><a href="./about/" class="nav-links">About Us</a></li>
-          <li><a href="./events/" class="nav-links">Events</a></li>
-          <li><a href="./contact/" class="nav-links">Contact</a></li>
-          <li><a href="./booking/" class="nav-links">Booking</a></li>
-          <li><a href="./shop/" class="nav-links">Shop</a></li>
-          <li id="nav-socials">
-            <a
-              href="https://www.facebook.com/pages/Ralphs-Rock-Diner/1548190695504277"
-              target="_blank"
-              class="social-link"
-            >
-              <img src="./imgs/fb.png" alt="Facebook Link"
-            /></a>
-            <a href="https://www.instagram.com/ralphs_rock_diner/" target="_blank" class="social-link">
-              <img src="./imgs/ig.png" alt="Instagram Link" />
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <div id="header-container">
+        <a href="./" class="social-link"><img src="./imgs/ralphs-logo-red.png" alt="Ralph's Diner Logo" /></a>
+        <div id="toggle"><span class="lines"></span><span class="lines"></span><span class="lines"></span></div>
+        <nav>
+          <ul>
+            <li><a href="./" class="nav-links">Home</a></li>
+            <li><a href="./about/" class="nav-links">About Us</a></li>
+            <li><a href="./events/" class="nav-links">Events</a></li>
+            <li><a href="./contact/" class="nav-links">Contact</a></li>
+            <!-- <li><a href="./booking/" class="nav-links">Booking</a></li> -->
+            <li><a href="./shop/" class="nav-links">Shop</a></li>
+            <li id="nav-socials">
+              <a
+                href="https://www.facebook.com/pages/Ralphs-Rock-Diner/1548190695504277"
+                target="_blank"
+                class="social-link"
+              >
+                <img src="./imgs/fb.png" alt="Facebook Link"
+              /></a>
+              <a href="https://www.instagram.com/ralphs_rock_diner/" target="_blank" class="social-link">
+                <img src="./imgs/ig.png" alt="Instagram Link" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <article>
@@ -44,23 +48,74 @@
 
       <article class="basic-info">
         <h2>Find Us</h2>
-        <a href="https://goo.gl/maps/XY2QKjCAQYp" target="_blank">148 Grove St. Worcester, MA 01605</a>
-        <br />
-        <a href="tel:+1(508)753-9543">(508) 753-9543</a>
-
-        <h2>Hours</h2>
         <p class="hours">
-          <span class="hours-left"><b>Everyday:</b></span>
-          <span class="hours-right">4pm - 2am</span>
+          <span class="find-us-left">Phone:</span>
+          <span class="hours-right"><a href="tel:+1(508)753-9543">(508) 753-9543</a></span>
         </p>
         <p class="hours">
-          <span class="hours-left"><b>Kitchen:</b></span>
-          <span class="hours-right">4pm - 1230am</span>
+          <span class="find-us-left">Address:</span>
+          <span class="hours-right"
+            ><a href="https://goo.gl/maps/XY2QKjCAQYp" target="_blank">148 Grove St. Worcester, MA 01605</a></span
+          >
         </p>
-        <p class="hours">
-          <span class="hours-left"><b>Last Call:</b></span>
-          <span class="hours-right">1:30am</span>
-        </p>
+        <div id="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d738.0104593239515!2d-71.80083084603534!3d42.27763027609587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4065a8116a9c1%3A0xf0806dbe47449ebb!2sRalph&#39;s%20Diner!5e0!3m2!1sen!2sus!4v1739654373282!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            id="map"
+          ></iframe>
+        </div>
+        <div id="general-info">
+          <section>
+            <h2>Hours</h2>
+            <p class="hours">
+              <span class="hours-left">Everyday:</span>
+              <span class="hours-right">4pm - 2am</span>
+            </p>
+            <p class="hours">
+              <span class="hours-left">Kitchen:</span>
+              <span class="hours-right">4pm - 1230am</span>
+            </p>
+            <p class="hours">
+              <span class="hours-left">Last Call:</span>
+              <span class="hours-right">1:30am</span>
+            </p>
+            <p><b>All events are 21+ unless otherwise specified.</b></p>
+          </section>
+          <section>
+            <h2>Menu</h2>
+            <p class="hours">
+              <span class="hours-left">Burger:</span>
+              <span class="hours-right">$13 | $14 Cheese</span>
+            </p>
+            <p class="hours">
+              <span class="hours-left">2 Hot Dogs & Chips:</span>
+              <span class="hours-right">$5</span>
+            </p>
+            <p class="hours">
+              <span class="hours-left">Walking Taco:</span>
+              <span class="hours-right">$5</span>
+            </p>
+            <p class="hours">
+              <span class="hours-left">Chili:</span>
+              <span class="hours-right">$6 Cup | $7 Bowl</span>
+            </p>
+            <p class="hours">
+              <span class="hours-left">Veggie Burger:</span>
+              <span class="hours-right">$12</span>
+            </p>
+            <p class="hours">
+              <span class="hours-left">Grilled Cheese:</span>
+              <span class="hours-right">$6</span>
+            </p>
+            <p class="hours">
+              <span class="hours-left">BLT:</span>
+              <span class="hours-right">$7</span>
+            </p>
+          </section>
+        </div>
       </article>
     </main>
     <footer>
